@@ -85,7 +85,7 @@ func (l *LinkedList) insert(after int, element int) {
 func (l *LinkedList) search(element int) *Node {
 	current := l.head
 	for current != nil {
-		if current.data == element{
+		if current.data == element {
 			return current
 		}
 		current = current.next
@@ -100,18 +100,4 @@ func (l *LinkedList) printer() {
 		element = element.next
 	}
 	fmt.Print("\n")
-}
-
-func main() {
-	lst := LinkedList{
-		head: nil,
-		tail: nil,
-		size: 0,
-	}
-	lst.addNewHead(6)
-	lst.addNewTail(10)
-	lst.addNewHead(5)
-	lst.insert(6, 8)
-	lst.printer()
-	fmt.Println(lst.search(6))
 }
